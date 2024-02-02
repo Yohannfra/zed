@@ -1,0 +1,76 @@
+// Default vim mappings: https://zed.dev/ref/vim.json
+// All default mappings: https://zed.dev/ref/default.json
+[
+  {
+    "bindings": {
+      // Vertical split like in VS-Code
+      "cmd-\\": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      // Navigate in line
+      "H": "vim::StartOfLine",
+      "L": "vim::EndOfLine",
+
+      // Tabs
+      "g r": "pane::ActivatePrevItem",
+
+      // For typos
+      "J": "vim::Down",
+      ";": "command_palette::Toggle",
+      "\"": "command_palette::Toggle",
+      "'": "command_palette::Toggle",
+
+      // Open file search
+      "f f": "file_finder::Toggle",
+
+      // Go to definition
+      "c d": "editor::GoToDefinition",
+
+      // Split navigation
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"]
+    }
+  },
+  {
+    // Comment text like with vim-commentary
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "g c c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    // Comment text like with vim-commentary
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "g c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  // Exit insert mode with jk
+  // https://github.com/zed-industries/zed/issues/5337
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      "j k": ["vim::NormalBefore", "vim::Right"],
+
+      // Erase previous word with C-w
+      "ctrl-w": "editor::DeleteToPreviousWordStart"
+    }
+  }
+]

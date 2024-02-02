@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+
+{
+  // Theme and UI
+  "theme": "Gruvbox Dark",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "relative_line_numbers": true,
+  "cursor_blink": false,
+  "scrollbar": { "show": "never" },
+
+  // Hide collaboration panel button in the status bar.
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": true
+  },
+  "assistant": {
+    "button": false
+  },
+
+  "show_call_status_icon": false,
+
+  "tabs": {
+    // Show git status colors in the editor tabs.
+    "git_status": true
+  },
+
+  "terminal": {
+    "copy_on_select": true
+  },
+
+  // Key maps and shortcuts
+  "base_keymap": "SublimeText",
+  "vim_mode": true,
+
+  // Disable github copilot
+  "features": {
+    "copilot": false
+  }
+}
