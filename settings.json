@@ -16,7 +16,10 @@
   "cursor_blink": false,
   "scrollbar": { "show": "never" },
 
-  // Hide collaboration panel button in the status bar.
+  // ruler at col 100
+  "wrap_guides": [100],
+  "show_wrap_guides": true,
+
   "collaboration_panel": {
     "button": false
   },
