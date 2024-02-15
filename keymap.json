@@ -70,7 +70,10 @@
       "j k": ["vim::NormalBefore", "vim::Right"],
 
       // Erase previous word with C-w
-      "ctrl-w": "editor::DeleteToPreviousWordStart"
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+
+      // Erase previous word with C-u
+      "ctrl-u": "editor::DeleteToBeginningOfLine"
     }
   }
 ]
