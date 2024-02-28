@@ -10,6 +10,7 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "enter": ["workspace::SendKeystrokes", "shift-o escape j"],
       // put key-bindings here if you want them to work in normal & visual mode
       // Navigate in line
       "H": "vim::StartOfLine",
